@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "29a9673e-3c31-4e75-85d0-a585e4738bcf",
+		"name": "Petly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23642067"
+	},
+	"item": [
+		{
+			"name": "user/registration/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Daniil\",\r\n  \"email\": \"daniil@email.com\",\r\n  \"password\": \"1234567\",\r\n  \"phone\": \"+380999199999\",\r\n  \"city\": \"Kyiv, Kyiv\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/user/registration",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"daniil1@email.com\",\r\n  \"password\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/user/login",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzllZDU4ZmRlMmFkNDM3NTc3NGVlZiIsImlhdCI6MTY2ODkzNTMzNiwiZXhwIjoxNjY4OTM4OTM2fQ.voUdxeGqOq64tdv3NuzJVzNc8JJU72l4johH9mEZJYk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/user/logout",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/current/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzllZDU4ZmRlMmFkNDM3NTc3NGVlZiIsImlhdCI6MTY2ODk4MzY5NiwiZXhwIjoxNjY4OTg3Mjk2fQ.FbsUHvTDk4NM0lIK_A7SzmQPTtPr6MunnuoBs9BhLe8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/user/current",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzllZDU4ZmRlMmFkNDM3NTc3NGVlZiIsImlhdCI6MTY2ODk4MzY5NiwiZXhwIjoxNjY4OTg3Mjk2fQ.FbsUHvTDk4NM0lIK_A7SzmQPTtPr6MunnuoBs9BhLe8 ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "birthday",
+							"value": "12.09.1999",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/user/update",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/pet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOGNmNzU4YzhkOTMzODRiZmE1MTkxYiIsImlhdCI6MTY3MDE4Mjg3NiwiZXhwIjoxNjcwMTg2NDc2fQ.KwuCaYirZNBChHW0Y9XFFhR-H2TRiU7G2XbR3M4-Jec",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Lucky",
+							"type": "text"
+						},
+						{
+							"key": "breed",
+							"value": "Hasky",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "12.06.2009",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/funny-cat-277-01.jpg"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/pet\n\n",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"pet\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/favorite/637b87ce4703997e45447284 (petID)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzllZDU4ZmRlMmFkNDM3NTc3NGVlZiIsImlhdCI6MTY2OTA1NzIwNywiZXhwIjoxNjY5MDYwODA3fQ.xZRW1bKwhhld9bXxMxwO2H-YfnXx0z2GVIHNfLCtJwU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/user/favorite/637b87ce4703997e45447284",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"favorite",
+						"637b87ce4703997e45447284"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cities/search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/cities/search?q=Kyi",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"cities",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kyi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "breeds/search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/breeds/search?q=hus",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "hus"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friends",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/friends",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"friends"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://team-project-backend.onrender.com/api/news",
+					"protocol": "https",
+					"host": [
+						"team-project-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"news"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
